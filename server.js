@@ -2,7 +2,7 @@
 // =============================================================
 var express = require('express');
 var path = require('path');
-var all = require('./app/data/campers.js');
+var all = require('./app/data/camprs.js/index.js');
 
 // Sets up the Express App
 // =============================================================
