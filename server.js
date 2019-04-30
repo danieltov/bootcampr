@@ -1,24 +1,31 @@
-// Dependencies
+// The Dependencies
 // =============================================================
 var express = require('express');
 var path = require('path');
-var all = require('./app/data/camprs.js');
 
-// Sets up the Express App
+// The Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-// Sets up the Express app to handle data parsing
+// The Parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Set Routes
+// The Data
+// =============================================================
+var all = require('./app/data/camprs.js');
+
+// The Routes
 // =============================================================
 require('./app/routes/apiRoutes.js')(app, all);
 require('./app/routes/htmlRoutes.js')(app, path);
 
-// Starts the server to begin listening
+// The Logic
+// =============================================================
+let compare = require('./app/public/logic.js');
+
+// The Listener
 // =============================================================
 app.listen(PORT, function() {
     console.log('App listening on http://localhost:' + PORT);
