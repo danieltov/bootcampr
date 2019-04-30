@@ -48,12 +48,12 @@
                                     />
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="picture"
+                                    <label for="photo"
                                         >Picture (required):</label
                                     >
                                     <input
                                         type="text"
-                                        id="picture"
+                                        id="photo"
                                         class="form-control"
                                         placeholder="Enter image URL"
                                         required
@@ -625,7 +625,10 @@
                             </div>
                         </div>
                         <div class="col-12 text-center">
-                            <button class="btn btn-lg text-white bg-primary">
+                            <button
+                                class="btn btn-lg text-white bg-primary"
+                                id="add-campr"
+                            >
                                 Submit
                             </button>
                         </div>
@@ -651,5 +654,31 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"
         ></script>
+        <script type="text/javascript">
+            $('#add-campr').on('click', function(e) {
+                e.preventDefault();
+
+                let radios = $('.active');
+                let scores = [];
+
+                for(let i = 0; i < radios.length; i++) {
+                    scores.push(parseInt(radios[i].innerText))
+                }
+                console.log(scores);
+
+                let newCampr = {
+                    name: $('#name')
+                        .val()
+                        .trim()
+                        .replace(/\s+/g, '')
+                        .toLowerCase(),
+                    photo: $('#photo')
+                        .val()
+                        .trim(),
+                    scores: scores
+                };
+                console.log(newCampr);
+            });
+        </script>
     </body>
 </html>
