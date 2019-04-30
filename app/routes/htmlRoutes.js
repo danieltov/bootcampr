@@ -1,4 +1,4 @@
-export default function(app) {
+module.exports = function(app) {
     // HTML Routes
     // =============================================================
 
@@ -11,4 +11,4 @@ export default function(app) {
     app.get('/survey', function(req, res) {
         res.sendFile(path.join(__dirname, 'app/public/survey.html'));
     });
-}
+};

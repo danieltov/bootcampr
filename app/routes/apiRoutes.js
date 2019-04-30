@@ -1,4 +1,4 @@
-export default function(app) {
+module.exports = function(app) {
     // API Routes
     // =============================================================
 
@@ -14,4 +14,4 @@ export default function(app) {
         all.camprs.push(newCampr);
         res.json(newCampr);
     });
-}
+};

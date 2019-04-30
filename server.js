@@ -2,7 +2,7 @@
 // =============================================================
 var express = require('express');
 var path = require('path');
-var all = require('./app/data/camprs.js/index.js');
+var camprs = require('./app/data/camprs.js');
 
 // Sets up the Express App
 // =============================================================
@@ -15,11 +15,11 @@ app.use(express.json());
 
 // Bring in Routes
 // =============================================================
-require('./app/routes/apiRoutes')(app);
-require('./app/routes/htmlRoutes')(app);
+require('./app/routes/apiRoutes.js')(app);
+require('./app/routes/htmlRoutes.js')(app);
 
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
-    console.log('App listening on PORT ' + PORT);
+    console.log('App listening on http://localhost:' + PORT);
 });
