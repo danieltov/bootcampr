@@ -27,7 +27,7 @@ app.get('/survey', function(req, res) {
 });
 
 // Displays all Camprs
-app.get('/api/characters', function(req, res) {
+app.get('/api/camprs', function(req, res) {
     return res.json(all.camprs);
 });
 
