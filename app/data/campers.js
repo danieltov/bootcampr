@@ -1,1 +1,3 @@
-let campers = [];
+module.exports = {
+    camprs: []
+};
