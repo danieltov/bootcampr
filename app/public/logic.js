@@ -8,7 +8,7 @@ function compare(user) {
             for (let i = 0; i < user.scores.length; i++) {
                 totalDifference += Math.abs(user.scores[i] - x.scores[i]);
             }
-            diff.push(totalDifference);
+            diff.push(parseInt(totalDifference));
         });
         let newBFF = data[findSmallest(diff)];
 
