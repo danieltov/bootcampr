@@ -16,14 +16,14 @@ app.use(express.json());
 // =============================================================
 var all = require('./app/data/camprs.js');
 
+// The Middleware
+// =============================================================
+app.use(express.static('./app/public'));
+
 // The Routes
 // =============================================================
 require('./app/routes/apiRoutes.js')(app, all);
 require('./app/routes/htmlRoutes.js')(app, path);
-
-// The Logic
-// =============================================================
-let compare = require('./app/public/logic.js');
 
 // The Listener
 // =============================================================
