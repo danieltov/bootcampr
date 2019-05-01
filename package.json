@@ -1,5 +1,5 @@
 {
-    "name": "Bootcampr",
+    "name": "bootcampr",
     "version": "1.0.0",
     "description": "A project meant to demonstrate an understanding of NodeJS and Express servers",
     "main": "server.js",
