@@ -1,23 +1,24 @@
 {
-  "name": "bootcampr",
-  "version": "1.0.0",
-  "description": "### Overview",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danieltov/bootcampr.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/danieltov/bootcampr/issues"
-  },
-  "homepage": "https://github.com/danieltov/bootcampr#readme",
-  "dependencies": {
-    "express": "^4.16.4"
-  }
+    "name": "Bootcampr",
+    "version": "1.0.0",
+    "description": "A project meant to demonstrate an understanding of NodeJS and Express servers",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danieltov/bootcampr.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/danieltov/bootcampr/issues"
+    },
+    "homepage": "https://github.com/danieltov/bootcampr#readme",
+    "dependencies": {
+        "express": "^4.16.4"
+    }
 }
