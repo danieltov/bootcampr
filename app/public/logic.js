@@ -11,7 +11,9 @@ function compare(user) {
             diff.push(parseInt(totalDifference));
         });
         let newBFF = data[findSmallest(diff)];
-        let percentage = (newBFF - 50) / 50;
+        console.log('the difference:');
+        console.log(findSmallest(diff));
+        let percentage = (50 - findSmallest(diff)) / 0.5;
 
         doModal(newBFF, percentage);
     });
