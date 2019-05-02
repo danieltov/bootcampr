@@ -11,8 +11,9 @@ function compare(user) {
             diff.push(parseInt(totalDifference));
         });
         let newBFF = data[findSmallest(diff)];
+        let percentage = (newBFF - 50) / 50;
 
-        doModal(newBFF);
+        doModal(newBFF, percentage);
     });
 }
 
@@ -28,7 +29,7 @@ function findSmallest(array) {
     return array[index];
 }
 
-function doModal(data) {
+function doModal(data, per) {
     let name = data.name.toUpperCase(),
         img = data.photo;
 
@@ -47,6 +48,7 @@ function doModal(data) {
                 </div>
                 <div class="modal-body">
                     <img class="img-fluid" src="${img}">
+                    <p class="lead text-dark">You and ${name}'s survey responses were <b>${per}% similar!</b></p>
                 </div>
                 <div class="modal-footer">
                     <button
